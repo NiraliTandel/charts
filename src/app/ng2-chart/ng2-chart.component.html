@@ -1,0 +1,22 @@
+<div>
+    <ng-container *ngIf="selectA === 'Ng2 Charts' && selectB === 'Line Chart'">
+        <canvas baseChart [type]="lineChartType" [data]="lineChartData" [options]="lineChartOptions">
+        </canvas>
+    </ng-container>
+
+    <ng-container *ngIf="selectA === 'Ng2 Charts' && selectB === 'Bar Chart'">
+        <canvas baseChart [type]="barChartType" [data]="barChartData" [options]="barChartOptions">
+        </canvas>
+    </ng-container>
+
+    <ng-container *ngIf="selectA === 'Ng2 Charts' && selectB === 'Pie Chart'">
+        <canvas baseChart [type]="doughnutChartType" [data]="doughnutChartData" [options]="doughnutChartOptions">
+        </canvas>
+    </ng-container>
+
+    <ng-container *ngIf="selectA === 'Ng2 Charts' && selectB === 'Area Chart'">
+        <canvas baseChart [datasets]="radarChartData" [options]="radarChartOptions" [labels]="radarChartLabels"
+            [type]="radarChartType">
+        </canvas>
+    </ng-container>
+</div>

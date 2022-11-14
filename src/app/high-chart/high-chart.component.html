@@ -1,0 +1,15 @@
+<ng-container *ngIf="selectA === 'High Charts' && selectB === 'Line Chart'">
+    <highcharts-chart [Highcharts]="Highcharts" [options]="lineChartOptions"></highcharts-chart>
+</ng-container>
+
+<ng-container *ngIf="selectA === 'High Charts' && selectB === 'Bar Chart'">
+    <highcharts-chart [Highcharts]="Highcharts" [options]="barChartOptions"></highcharts-chart>
+</ng-container>
+
+<ng-container *ngIf="selectA === 'High Charts' && selectB === 'Pie Chart'">
+    <highcharts-chart [Highcharts]="Highcharts" [options]="pieChartOptions"></highcharts-chart>
+</ng-container>
+
+<ng-container *ngIf="selectA === 'High Charts' && selectB === 'Area Chart'">
+    <highcharts-chart [Highcharts]="Highcharts" [options]="areaChartOptions"></highcharts-chart>
+</ng-container>

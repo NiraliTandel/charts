@@ -1,0 +1,27 @@
+<div class="m-4">
+  <label>Library:</label>
+  <select [(ngModel)]="selectA">
+    <option [value]=""></option>
+    <option *ngFor="let library of libraries; let i = index" [value]="library">{{ library }}</option>
+  </select>
+
+  <label class="ms-4">Type:</label>
+  <select [(ngModel)]="selectB">
+    <option [value]=""></option>
+    <option *ngFor="let type of types; let z = index" [value]="type">{{ type }}</option>
+  </select>
+</div>
+
+<div class="m-4">
+  <ng-container *ngIf="selectA === 'Ngx Charts'">
+    <app-ngx-chart [selectA]="selectA" [selectB]="selectB"></app-ngx-chart>
+  </ng-container>
+
+  <ng-container *ngIf="selectA === 'Ng2 Charts'">
+    <app-ng2-chart [selectA]="selectA" [selectB]="selectB"></app-ng2-chart>
+  </ng-container>
+
+  <ng-container *ngIf="selectA === 'High Charts'">
+    <app-high-chart [selectA]="selectA" [selectB]="selectB"></app-high-chart>
+  </ng-container>
+</div>

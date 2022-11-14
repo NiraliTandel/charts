@@ -1,0 +1,29 @@
+<ng-container *ngIf="selectA === 'Ngx Charts' && selectB === 'Line Chart'">
+    <ngx-charts-line-chart [view]="view" [scheme]="colorScheme" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel" [xAxis]="showXAxis" [yAxis]="showYAxis" [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="multi" (select)="onSelect($event)"
+        (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+    </ngx-charts-line-chart>
+</ng-container>
+
+<ng-container *ngIf="selectA === 'Ngx Charts' && selectB === 'Bar Chart'">
+    <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient"
+        [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel"
+        (select)="onSelect($event)">
+    </ngx-charts-bar-vertical>
+</ng-container>
+
+<ng-container *ngIf="selectA === 'Ngx Charts' && selectB === 'Pie Chart'">
+    <ngx-charts-pie-chart [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient"
+        [legend]="showLegend" [labels]="showLabels" [doughnut]="isDoughnut" (select)="onSelect($event)"
+        (activate)="onActivate($event)" (deactivate)="onDeactivate($event)">
+    </ngx-charts-pie-chart>
+</ng-container>
+
+<ng-container *ngIf="selectA === 'Ngx Charts' && selectB === 'Area Chart'">
+    <ngx-charts-area-chart [view]="view" [scheme]="colorScheme" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel" [xAxis]="showXAxis" [yAxis]="showYAxis" [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel" [timeline]="timeline" [results]="multi" (select)="onSelect($event)">
+    </ngx-charts-area-chart>
+</ng-container>
